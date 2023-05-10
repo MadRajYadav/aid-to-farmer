@@ -1,0 +1,236 @@
+ create table user_data (
+user_id int AUTO_INCREMENT PRIMARY KEY,
+name CHARACTER(25),
+city CHARACTER(20),
+district CHARACTER(20),
+land_mark CHARACTER (40),
+pin_code integer (6),
+state CHARACTER (15),
+email CHARACTER (30),
+number varchar (10),
+password varchar(50),
+longitude varchar(20), 
+latitude varchar(20),
+ date DATETIME),
+ profile_pic varchar(30) ;
+ alter table user_data auto_increment=44551;
+
+create table seller_data (
+user_id CHARACTER (20),
+account_no integer (16),
+account_h_name CHARACTER (25),
+bank CHARACTER (25),
+upi_id CHARACTER (20),
+SDateTime datetime );
+
+
+
+create table product (
+ user_id integer(8),
+ item_id integer(5),
+ product_id int auto_increment primary key,
+ pro_name CHARACTER (25), 
+ pro_prize integer (5), 
+ pro_quantity integer(4),
+ pro_unit varchar(6),
+ pro_location varchar(100),
+ date datetime);
+
+ alter table product auto_increment=44551;
+
+
+ create table order_table ( order_id int auto_increment primary key,seller_id int(10), user_id int(10), product_id int(8), total_amount float(7,2),quantity float(3), datetime datetime, status varchar(50));
+alter table order_table auto_increment = 44550;
+
+create table order_table (seller_id int(10), user_id int(10), product_id int(8), total_amount float(7,2),quantity float(3), datetime datetime);
+
+
+create table history (user_id int(10), seller_id int(10),order_id int(8), pro_id int(8), pro_name varchar(30), price float(7,2),quantity int(3), datetime datetime,, status varchar(20), order_date datetime);
+
+create table item (item_name varchar(30), min_price int(4), item_location varchar(30),item_id int AUTO_INCREMENT PRIMARY KEY);
+alter table item AUTO_INCREMENT=4451;
+
+////
+alter table item add item_id int AUTO_INCREMENT PRIMARY KEY;
+alter table item AUTO_INCREMENT=4451;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+        function validate(){
+            number=document.getElementById("nmbr").value;
+            password=document.getElementById("pswd").value;
+            captcha=document.getElementById("cpcha").value;
+
+            if(!number.match(/^[0-9]{10}$/))
+            {
+                document.getElementById("nm").innerHTML="<font color='red' size='2px'>Oops!, Please input valid Number.</font><br>";
+                document.getElementById("nmbr").value="";
+                document.getElementById("nmbr").focus();
+                return false;
+
+            }
+            else 
+                document.getElementById("nm").innerHTML="";
+
+
+            if(!password.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/))
+            {
+                document.getElementById("pass").innerHTML="<font color='red' size='2px'>Must contain atleast one number, one uppercase and lowercase alphabets and 6-15 character.</font><br>";
+                document.getElementById("pswd").value="";
+                document.getElementById("pswd").focus();
+                return false;
+
+            }
+            else 
+                document.getElementById("pass").innerHTML="";
+            
+        }
+    function call(){
+        alert("First log in, then click.");
+    }
